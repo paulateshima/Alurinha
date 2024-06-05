@@ -1,0 +1,136 @@
+/* coloca o display: flex e suas outras propriedades no pai */
+.cabecalhoPrincipal .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.cabecalhoPrincipal-nav {
+    display: flex; /* deixa os elementos alinhados em linha */
+}
+
+
+.rodapePrincipal-patrocinadores .container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.rodapePrincipal-patrocinadores-list {
+    display: flex;
+    align-items: center; /* para alinhar verticalmente os 3 logos */
+    justify-content: space-around;
+    width: 70%; /* para que os logos tenham espaço no lado direito para poder alinhá-los */
+    margin-right: 5%; /* para o logo casa do código não ficar grudado na caixa input */
+}
+
+.rodapePrincipal-contatoForm {
+    width: 25%;
+}
+
+.rodapePrincipal-contatoForm-fieldset{
+    display: flex; /* para o botão enviar ficar na mesma altura que o input*/
+}
+
+.rodapePrincipal-navMap-list {
+    display: flex;
+    flex-direction: column;
+    height: 250px; /* medir a altura desejada para o flex wrap poder quebrar a linha */
+    flex-wrap: wrap;
+}    
+
+.conteudoPrincipal-cursos {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.conteudoPrincipal-cursos-link {
+    width: 23%; /* 25% para ter 4 elementos por linha e 23% para poder dar um espaçamento entre os elementos*/
+    margin: 1%; /* para dar espaço entre os elementos */
+}
+
+.conteudoPrincipal-cursos-link:nth-child(4n) {
+    margin-right: 0;
+}
+
+.conteudoPrincipal-cursos-link:nth-child(4n+1) {
+    margin-left: 0;
+}
+
+.videoSobre .container {
+    display: flex;
+}
+
+.videoSobre-sobre {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+
+.videoSobre-sobre-list {
+    flex-grow: 1;
+}
+
+.videoSobre-video {
+    flex-grow: 1;
+    flex-shrink: 2;
+}
+
+/* Parte Mobile */
+
+@media(max-width: 768px) {
+.cabecalhoPrincipal-nav {
+    flex-direction: column;
+}
+
+.cabecalhoPrincipal .container {
+    flex-direction: column;
+    align-items: initial;
+    text-align: center;
+}
+
+.conteudoPrincipal-cursos-link {
+    width: 100%;
+
+}
+
+.conteudoPrincipal-cursos {
+    flex-direction: column;
+}
+
+.rodapePrincipal-navMap-list {
+    height: auto;
+}
+
+
+.rodapePrincipal-patrocinadores .container {
+    flex-direction: column;
+    align-items: center;
+}
+
+.rodapePrincipal-patrocinadores-list {
+    margin: 0;
+    width: 100%;
+}
+
+.rodapePrincipal-contatoForm {
+    width: 100%;
+}
+
+.rodapePrincipal-contatoForm-fieldset {
+    justify-content: center;
+}
+
+.cabecalhoPrincipal-nav-link-app {
+    order: -1;
+}
+
+.videoSobre .container {
+    flex-direction: column;
+}
+
+.videoSobre-video {
+    margin: 0 auto;
+}
+
+}
